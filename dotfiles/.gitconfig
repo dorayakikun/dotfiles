@@ -1,0 +1,68 @@
+[alias]
+  amend = commit --amend
+  back = checkout "-"
+  branches = branch -a
+  branchout = checkout -b
+  contributors = shortlog -s -n
+  discard = checkout --
+  filetrail = git log --follow -p -w
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
+  history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
+  invert = revert
+  last = log -1 HEAD --format=format:"%Cred%H"
+  mergetrail = log --ancestry-path --merges
+  move = mv
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
+  prestage = diff -w --word-diff=color
+  remotes = remote -v
+  remove = rm
+  resave = commit --amend
+  rewrite = rebase -i
+  save = commit -m
+  stashes = stash list
+  summary = status -u -s
+  tags = tag
+  uncommit = reset --mixed HEAD~
+  unmerged = diff --name-only --diff-filter=U
+  unstage = reset -q HEAD --
+  unstash = stash pop
+  untrack = rm -r --cached
+  what = show -w
+[blame]
+  date = relative
+[core]
+  editor = vi
+  excludesfile = ~/.gitignore_global
+  precomposeunicode = true
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+[credential]
+  helper = osxkeychain
+[ghq]
+  root = ~/src
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+[pull]
+  rebase = true
+[push]
+  default = current
+[merge]
+  conflictstyle = diff3
+[tig "bind"]
+  generic = g move-first-line
+  generic = G move-last-line
+  generic = <Ctrl-F> move-page-down
+  generic = <Ctrl-B> move-page-up
+[user]
+	email = amakunai.dorayaki@gmail.com
+	name = Tomohide Takao
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
