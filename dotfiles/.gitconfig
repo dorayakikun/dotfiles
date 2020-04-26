@@ -60,9 +60,9 @@
   generic = <Ctrl-F> move-page-down
   generic = <Ctrl-B> move-page-up
 [user]
-	email = amakunai.dorayaki@gmail.com
-	name = Tomohide Takao
+  email = github@dorayakikun.com
+  name = Tomohide Takao
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
