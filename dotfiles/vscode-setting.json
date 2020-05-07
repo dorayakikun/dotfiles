@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "Cica",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "Cica",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Verdigris Light",
+    "window.zoomLevel": 1,
+    "workbench.editor.enablePreview": false
+}
